@@ -1,3 +1,9 @@
+mrpdi (2.7) bionic; urgency=medium
+
+  * Bionic release
+
+ -- Juanma Navarro Mañez <juanma1980@gmail.com>  Thu, 04 Oct 2018 09:08:57 +0200
+
 mrpdi (2.6) xenial; urgency=medium
 
   * Ported trusty code to xenial
