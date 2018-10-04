@@ -1,0 +1,30 @@
+#!/usr/bin/make -f 
+
+%:
+	dh $@
+
+
+
+override_dh_install:
+
+ifeq ($(DEB_BUILD_ARCH),amd64)
+	@echo "Using amd64 setup" 
+	mkdir -p pc/usr/lib/x86_64-linux-gnu/pkgconfig
+	cp mrpdi-amd64.pc pc/usr/lib/x86_64-linux-gnu/pkgconfig/mrpdi.pc	
+	
+	mkdir -p install/usr/lib/x86_64-linux-gnu
+	cp src/libmrpdi.so install/usr/lib/x86_64-linux-gnu
+	
+endif
+
+ifeq ($(DEB_BUILD_ARCH),i386)
+	@echo "Using i386 setup" 
+	mkdir -p pc/usr/lib/i386-linux-gnu/pkgconfig
+	cp mrpdi-i386.pc pc/usr/lib/i386-linux-gnu/pkgconfig/mrpdi.pc	
+	
+	mkdir -p install/usr/lib/i386-linux-gnu
+	cp src/libmrpdi.so install/usr/lib/i386-linux-gnu
+
+endif
+
+	dh_install
