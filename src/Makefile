@@ -8,7 +8,7 @@ LIBUSB_LINK=`pkg-config libusb-1.0 --libs`
 
 
 
-COMPILER_FLAGS=-O3 -march=native -I ../include/ 
+COMPILER_FLAGS=-O3 -I ../include/ 
 
 LIB_NAME=libmrpdi.so
 
