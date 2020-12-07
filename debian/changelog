@@ -1,4 +1,4 @@
-mrpdi (2.7.2) bionic; urgency=medium
+mrpdi (2.7.2) xenial; urgency=medium
 
   * Master tag: 934e0f58cdb6292f4381b52566d6dc9e2718a559
   * Removed march=native flag in order to avoid some excessive instruction set
